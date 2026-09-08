@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield silhouette, kept within the adaptive-icon safe zone. -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,20 C46,20 38,23 32,28 L32,52 C32,68 41,80 54,88 C67,80 76,68 76,52 L76,28 C70,23 62,20 54,20 Z" />
+    <!-- Checkmark, punched out using the background color so it reads clearly on the shield. -->
+    <path
+        android:strokeColor="@color/ic_launcher_background"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M42,54 L51,64 L68,42" />
+</vector>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Minimal shell theme built only from platform styles (no extra theming library needed,
+        since the app's real UI is 100% Jetpack Compose / Material 3). This just avoids a flash
+        of the wrong theme in the instant before setContent{} draws the actual Compose UI.
+        Light variant; see values-night/themes.xml for the dark counterpart.
+    -->
+    <style name="Theme.AppGuardian" parent="@android:style/Theme.Material.Light.NoActionBar" />
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Deliberately narrow configuration:
+      - eventTypes: only window-state changes (i.e. "the foreground app changed"), nothing else.
+      - No packageNames filter, because we must be able to notice ANY app coming to the
+        foreground, not a fixed set — that's how newly installed blocked apps get caught too.
+      - canRetrieveWindowContent is required to read window text, used ONLY to compare against
+        this app's own label on the system Settings screen (see AppBlockAccessibilityService).
+      - isAccessibilityTool is intentionally omitted/false: this is not a disability-accessibility
+        tool, and declaring it as one would be inaccurate. That flag/declaration matters mainly
+        for Play Store distribution, which is out of scope for this personal build.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accessibilityEventTypes="typeWindowStateChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagRetrieveInteractiveWindows"
+    android:canRetrieveWindowContent="true"
+    android:description="@string/accessibility_service_description"
+    android:notificationTimeout="100" />

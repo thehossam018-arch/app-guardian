@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Package visibility (Android 11+): we only need to see apps that a user could actually
+        open and therefore might want blocked. A LAUNCHER/MAIN query intent covers essentially
+        every user-facing app (including every browser) without requesting the broad
+        QUERY_ALL_PACKAGES permission, which Google Play restricts and which is not technically
+        necessary for this feature.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
+    <!-- Lets the user exempt App Guardian from Doze/battery-optimization killing the service. -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".AppGuardianApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppGuardian">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppGuardian">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            The block screen. singleTask + excludeFromRecents so repeated foreground-app switches
+            into a blocked app never stack duplicate block screens or leave stray recents entries.
+            Not exported: only App Guardian's own service ever launches it.
+        -->
+        <activity
+            android:name=".ui.blockedscreen.BlockedActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppGuardian" />
+
+        <!--
+            Accessibility service used solely to detect the current foreground package and, when
+            it matches the user's blocked list, launch BlockedActivity on top of it. It never
+            reads, stores, or transmits screen content — the one narrow exception is checking
+            whether the Settings app's current screen text equals this app's own label, purely to
+            show a local warning before the user uninstalls App Guardian (see service class for
+            details). exported="true" is required so the system can bind to it; binding itself is
+            restricted to the system via BIND_ACCESSIBILITY_SERVICE.
+        -->
+        <service
+            android:name=".service.AppBlockAccessibilityService"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+    </application>
+</manifest>

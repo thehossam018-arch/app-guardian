@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Guardian</string>
+
+    <string name="accessibility_service_description">App Guardian uses this service only to notice which app is currently open, so it can show a block screen if that app is on your blocked list. It never reads, stores, or sends personal content, and nothing ever leaves your device.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_blocked_apps">Blocked Apps</string>
+    <string name="nav_add_app">Add App</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Home -->
+    <string name="home_title">App Guardian</string>
+    <string name="home_blocked_count">%1$d apps blocked</string>
+    <string name="home_service_status_label">Blocking service</string>
+    <string name="home_service_active">Active</string>
+    <string name="home_service_inactive">Inactive — tap to enable</string>
+    <string name="home_open_accessibility_settings">Enable Accessibility Service</string>
+    <string name="home_manage_blocked_apps">Manage Blocked Apps</string>
+    <string name="home_protection_settings">Protection Settings</string>
+    <string name="home_add_app">Add App to Block</string>
+
+    <!-- Blocked apps list -->
+    <string name="blocked_apps_title">Blocked Apps</string>
+    <string name="blocked_apps_empty">No apps blocked yet.</string>
+    <string name="status_installed">Installed</string>
+    <string name="status_not_installed">Not installed</string>
+    <string name="action_remove">Remove</string>
+
+    <!-- Add app -->
+    <string name="add_app_title">Add App</string>
+    <string name="add_app_search_hint">Search apps</string>
+    <string name="tab_installed_apps">Installed Apps</string>
+    <string name="tab_suggested_browsers">Suggested Browsers</string>
+    <string name="add_app_selected_count">%1$d selected</string>
+    <string name="action_add_to_block_list">Add to Block List</string>
+    <string name="browsers_note">A curated list of common browsers, installed or not — new matching installs will be blocked automatically. It cannot cover every browser ever published, since checking that would require contacting an online store.</string>
+
+    <!-- Blocked screen -->
+    <string name="blocked_screen_title">This app is blocked</string>
+    <string name="blocked_screen_app_label">App</string>
+    <string name="blocked_screen_reason_label">Reason</string>
+    <string name="action_go_home">Back to Home Screen</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_enable_blocking">Enable blocking</string>
+    <string name="settings_enable_blocking_desc">Turn all blocking on or off</string>
+    <string name="settings_protection_section">Protection</string>
+    <string name="settings_set_pin">Set PIN</string>
+    <string name="settings_change_pin">Change PIN</string>
+    <string name="settings_remove_pin">Remove PIN</string>
+    <string name="settings_pin_forgot_note">There is no PIN recovery — this is intentional, so a PIN can\'t be reset by anyone but you. If you forget it, the only way back in is clearing App Guardian\'s app data from Android Settings, which also erases the blocked list.</string>
+    <string name="settings_battery_section">Reliability</string>
+    <string name="settings_ignore_battery_optimization">Ignore battery optimization</string>
+    <string name="settings_battery_note">Helps prevent Android from pausing the blocking service in the background. Some phone brands (e.g. Xiaomi, Huawei, Oppo) have their own extra battery managers that may still need to be allowed separately in their own settings.</string>
+    <string name="settings_language_section">Language</string>
+    <string name="settings_language_system">Follow system</string>
+    <string name="settings_language_arabic">العربية</string>
+    <string name="settings_language_english">English</string>
+    <string name="settings_accessibility_section">Accessibility Service</string>
+    <string name="settings_accessibility_status_label">Status</string>
+    <string name="settings_accessibility_enabled">Enabled</string>
+    <string name="settings_accessibility_disabled">Disabled</string>
+    <string name="settings_accessibility_instructions">Blocking only works while this is on: Settings → Accessibility → Installed apps → App Guardian → turn it on.</string>
+    <string name="settings_about_section">About</string>
+    <string name="settings_version_label">Version</string>
+
+    <!-- PIN dialogs -->
+    <string name="pin_enter_title">Enter PIN</string>
+    <string name="pin_set_title">Set a PIN</string>
+    <string name="pin_set_new_prompt">Choose a 4–6 digit PIN</string>
+    <string name="pin_confirm_prompt">Confirm PIN</string>
+    <string name="pin_current_prompt">Enter current PIN</string>
+    <string name="error_pin_mismatch">PINs don\'t match</string>
+    <string name="error_pin_incorrect">Incorrect PIN</string>
+    <string name="error_pin_too_short">PIN must be at least 4 digits</string>
+
+    <!-- Common -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_save">Save</string>
+    <string name="action_back">Back</string>
+
+    <!-- Self-protection notice -->
+    <string name="uninstall_page_warning">Uninstalling App Guardian will turn off all blocking.</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_app_icon">App icon</string>
+    <string name="cd_search">Search</string>
+    <string name="cd_delete">Delete</string>
+    <string name="cd_back">Back</string>
+</resources>

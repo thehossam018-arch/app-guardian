@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">App Guardian</string>
+
+    <string name="accessibility_service_description">يستخدم App Guardian هذه الخدمة فقط لمعرفة التطبيق المفتوح حاليًا، حتى يعرض شاشة حجب إذا كان هذا التطبيق ضمن قائمتك المحجوبة. لا تقرأ الخدمة أو تخزّن أو ترسل أي محتوى شخصي، ولا تُرسل أي بيانات خارج جهازك أبدًا.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_blocked_apps">التطبيقات المحجوبة</string>
+    <string name="nav_add_app">إضافة تطبيق</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <!-- Home -->
+    <string name="home_title">App Guardian</string>
+    <string name="home_blocked_count">%1$d تطبيقات محجوبة</string>
+    <string name="home_service_status_label">خدمة الحجب</string>
+    <string name="home_service_active">نشطة</string>
+    <string name="home_service_inactive">متوقفة — اضغط للتفعيل</string>
+    <string name="home_open_accessibility_settings">تفعيل خدمة الوصول (Accessibility)</string>
+    <string name="home_manage_blocked_apps">إدارة التطبيقات المحجوبة</string>
+    <string name="home_protection_settings">إعدادات الحماية</string>
+    <string name="home_add_app">إضافة تطبيق للحجب</string>
+
+    <!-- Blocked apps list -->
+    <string name="blocked_apps_title">التطبيقات المحجوبة</string>
+    <string name="blocked_apps_empty">لا يوجد أي تطبيق محجوب حتى الآن.</string>
+    <string name="status_installed">مثبت</string>
+    <string name="status_not_installed">غير مثبت</string>
+    <string name="action_remove">إزالة</string>
+
+    <!-- Add app -->
+    <string name="add_app_title">إضافة تطبيق</string>
+    <string name="add_app_search_hint">ابحث عن تطبيق</string>
+    <string name="tab_installed_apps">التطبيقات المثبتة</string>
+    <string name="tab_suggested_browsers">متصفحات مقترحة</string>
+    <string name="add_app_selected_count">%1$d محدد</string>
+    <string name="action_add_to_block_list">إضافة إلى قائمة الحجب</string>
+    <string name="browsers_note">قائمة مختارة تضم أشهر المتصفحات، مثبتة كانت أو لا — أي تثبيت لاحق مطابق سيُحجب تلقائيًا. لا يمكنها تغطية كل متصفح صدر على الإطلاق، لأن ذلك يتطلب الاتصال بمتجر تطبيقات عبر الإنترنت.</string>
+
+    <!-- Blocked screen -->
+    <string name="blocked_screen_title">هذا التطبيق محجوب</string>
+    <string name="blocked_screen_app_label">التطبيق</string>
+    <string name="blocked_screen_reason_label">السبب</string>
+    <string name="action_go_home">العودة إلى الشاشة الرئيسية</string>
+
+    <!-- Settings -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_enable_blocking">تفعيل الحجب</string>
+    <string name="settings_enable_blocking_desc">تشغيل أو إيقاف الحجب بالكامل</string>
+    <string name="settings_protection_section">الحماية</string>
+    <string name="settings_set_pin">تعيين رمز PIN</string>
+    <string name="settings_change_pin">تغيير رمز PIN</string>
+    <string name="settings_remove_pin">إزالة رمز PIN</string>
+    <string name="settings_pin_forgot_note">لا توجد طريقة لاسترداد رمز PIN — وهذا مقصود، حتى لا يستطيع أحد غيرك إعادة ضبطه. إذا نسيته، فالحل الوحيد هو مسح بيانات تطبيق App Guardian من إعدادات أندرويد، وهذا سيحذف قائمة الحجب أيضًا.</string>
+    <string name="settings_battery_section">الموثوقية</string>
+    <string name="settings_ignore_battery_optimization">استثناء من تحسين البطارية</string>
+    <string name="settings_battery_note">يساعد على منع أندرويد من إيقاف خدمة الحجب في الخلفية. بعض الشركات (مثل Xiaomi وHuawei وOppo) لديها أنظمة إدارة بطارية إضافية خاصة بها قد تحتاج للسماح للتطبيق بالعمل ضمنها بشكل منفصل.</string>
+    <string name="settings_language_section">اللغة</string>
+    <string name="settings_language_system">حسب لغة النظام</string>
+    <string name="settings_language_arabic">العربية</string>
+    <string name="settings_language_english">English</string>
+    <string name="settings_accessibility_section">خدمة الوصول (Accessibility)</string>
+    <string name="settings_accessibility_status_label">الحالة</string>
+    <string name="settings_accessibility_enabled">مفعّلة</string>
+    <string name="settings_accessibility_disabled">متوقفة</string>
+    <string name="settings_accessibility_instructions">الحجب يعمل فقط عندما تكون هذه الخدمة مفعّلة: الإعدادات ← الوصول (Accessibility) ← التطبيقات المثبتة ← App Guardian ← تفعيل.</string>
+    <string name="settings_about_section">حول التطبيق</string>
+    <string name="settings_version_label">الإصدار</string>
+
+    <!-- PIN dialogs -->
+    <string name="pin_enter_title">أدخل رمز PIN</string>
+    <string name="pin_set_title">تعيين رمز PIN</string>
+    <string name="pin_set_new_prompt">اختر رمزًا من 4 إلى 6 أرقام</string>
+    <string name="pin_confirm_prompt">تأكيد الرمز</string>
+    <string name="pin_current_prompt">أدخل الرمز الحالي</string>
+    <string name="error_pin_mismatch">الرمزان غير متطابقين</string>
+    <string name="error_pin_incorrect">رمز غير صحيح</string>
+    <string name="error_pin_too_short">يجب أن يتكون الرمز من 4 أرقام على الأقل</string>
+
+    <!-- Common -->
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_confirm">تأكيد</string>
+    <string name="action_save">حفظ</string>
+    <string name="action_back">رجوع</string>
+
+    <!-- Self-protection notice -->
+    <string name="uninstall_page_warning">إلغاء تثبيت App Guardian سيؤدي إلى إيقاف الحجب بالكامل.</string>
+
+    <!-- Content descriptions -->
+    <string name="cd_app_icon">أيقونة التطبيق</string>
+    <string name="cd_search">بحث</string>
+    <string name="cd_delete">حذف</string>
+    <string name="cd_back">رجوع</string>
+</resources>
