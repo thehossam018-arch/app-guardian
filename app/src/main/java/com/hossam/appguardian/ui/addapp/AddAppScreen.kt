@@ -17,6 +17,7 @@ import androidx.compose.material3.Tab
 import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -30,7 +31,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.hossam.appguardian.R
 import com.hossam.appguardian.ui.components.SelectableAppListItem
 import com.hossam.appguardian.ui.components.rememberAppIcon
-
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddAppScreen(
     onDone: () -> Unit,
